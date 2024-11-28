@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var msg = "abc_def_ghi";
+        var result = "";
+        var arr = msg.split("_");
+        document.write('下划线命名' + msg);
+        for (var i = 0; i < arr.length; i++) {
+            var temp = "";
+            for (var j = 0; j < arr[i].length; j++){
+                if (j === 0) {
+                    temp += arr[i][j].toUpperCase();
+                } else {
+                    temp += arr [i][j];
+                }
+            }
+            result +=temp;
+        }
+        document.write('驼峰命名法' + result);
+    </script>
+</body>
+</html>

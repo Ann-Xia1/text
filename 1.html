@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var hexColor = String(prompt('输入hex颜色'));
+       if (hexColor.charAt(0) === '#') {
+            hexColor = hexColor.slice(1);
+        }
+        if (hexColor.length == 3 ) {
+            var red = parseInt(hexColor.substring(0,1)+hexColor.substring(0,1), 16);
+            var green = parseInt(hexColor.substring(1,2)+hexColor.substring(1,2), 16);
+            var blue = parseInt(hexColor.substring(2,3)+hexColor.substring(2,3), 16);
+        } else if(hexColor.length == 6){
+            var red = parseInt(hexColor.substring(0, 2), 16);
+            var green = parseInt(hexColor.substring(2, 4), 16);
+            var blue = parseInt(hexColor.substring(4, 6), 16);
+        } else {
+            throw new Error('Invalid hex color');
+        }
+        document.write (red + ',' + green + ',' + blue);
+    </script>
+</body>
+</html>
